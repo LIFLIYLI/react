@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import 'normalize.css'
 import './App.css';
+import './reset.css'
 import TodoInput from './TodoInput'
 import TodoItem from './TodoItem'
+
 class App extends Component {
-  // 1
   constructor(props){
     super(props)
     this.state = {
@@ -14,9 +16,8 @@ class App extends Component {
       ]
     }
   }
-
   render() {
-    //2
+
     let todos = this.state.todoList.map((item,index)=>{
       return ( // 为什么这里要加个括号？这是动手题3 🐸
         <li>
@@ -24,7 +25,7 @@ class App extends Component {
         </li>
       )
     })
-    
+
     return (
       <div className="App">
  <h1>我的待办</h1>
